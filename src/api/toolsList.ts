@@ -357,7 +357,6 @@ export const toolsList = [
       },
     ],
   },
-  ,
   {
     name: "Library",
     slug: "library",
