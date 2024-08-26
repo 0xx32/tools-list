@@ -10,33 +10,49 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
+import { Route as rootRoute } from "./routes/__root";
+import { Route as IndexImport } from "./routes/index";
+import { Route as ToolsToolIdImport } from "./routes/tools/$toolId";
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
-  path: '/',
+  path: "/",
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
+
+const ToolsToolIdRoute = ToolsToolIdImport.update({
+  path: "/tools/$toolId",
+  getParentRoute: () => rootRoute,
+} as any);
 
 // Populate the FileRoutesByPath interface
 
-declare module '@tanstack/react-router' {
+declare module "@tanstack/react-router" {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
+    "/": {
+      id: "/";
+      path: "/";
+      fullPath: "/";
+      preLoaderRoute: typeof IndexImport;
+      parentRoute: typeof rootRoute;
+    };
+    "/tools/$toolId": {
+      id: "/tools/$toolId";
+      path: "/tools/$toolId";
+      fullPath: "/tools/$toolId";
+      preLoaderRoute: typeof ToolsToolIdImport;
+      parentRoute: typeof rootRoute;
+    };
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({ IndexRoute })
+export const routeTree = rootRoute.addChildren({
+  IndexRoute,
+  ToolsToolIdRoute,
+});
 
 /* prettier-ignore-end */
 
@@ -46,11 +62,15 @@ export const routeTree = rootRoute.addChildren({ IndexRoute })
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/tools/$toolId"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/tools/$toolId": {
+      "filePath": "tools/$toolId.tsx"
     }
   }
 }

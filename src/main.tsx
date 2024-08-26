@@ -20,6 +20,8 @@ declare module "@tanstack/react-router" {
 const rootElement = document.getElementById("root")!;
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
+
+  document.documentElement.classList.add("dark");
   root.render(
     // <StrictMode>
     <RouterProvider router={router} />,
