@@ -1,9 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute("/")({
-  component: () => (
-    <div className="text-3xl">
-      reactuse 🚀 the largest and most useful hook library
-    </div>
-  ),
-});
+export const Route = createFileRoute('/')({
+	component: () => (
+		<div className="">
+			<h1 className="mb-4 text-3xl"> MyTools 🚀 </h1>
+
+			<p>Наш сайт содержит информацию о различных инструментах и ресурсах, которые могут быть полезны для тебя</p>
+		</div>
+	),
+})

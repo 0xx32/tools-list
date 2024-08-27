@@ -1,4 +1,4 @@
 interface Tool {
-  name: string;
-  link: string;
+	name: string
+	link: string
 }
