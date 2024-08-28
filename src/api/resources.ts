@@ -213,6 +213,10 @@ export const RESOURCES = [
 						link: 'https://animate.style/',
 					},
 					{
+						name: 'Auto Animate',
+						link: 'https://auto-animate.formkit.com/',
+					},
+					{
 						name: 'React Spring',
 						link: 'https://react-spring.dev/',
 					},
