@@ -4,6 +4,119 @@ export const RESOURCES = [
 		slug: 'web',
 		sections: [
 			{
+				name: 'Libraries',
+				slug: 'libraries',
+				tools: [
+					{
+						name: 'Split JS',
+						link: 'https://www.spltjs.com/',
+					},
+					{
+						name: 'Nice Select 2',
+						link: 'https://bluzky.github.io/nice-select2/',
+					},
+					{
+						name: 'Sweet Alert 2',
+						link: 'https://sweetalert2.github.io/',
+					},
+
+					{
+						name: 'Toastify JS',
+						link: 'https://apvarun.github.io/toastify-js/',
+					},
+					{
+						name: 'Hammer JS',
+						link: 'https://hammerjs.github.io/',
+					},
+					{
+						name: 'Validator JS',
+						link: 'https://github.com/validatorjs/validator.js',
+					},
+					{
+						name: 'Underscore JS',
+						link: 'https://underscorejs.org/',
+					},
+					{
+						name: 'Moment JS',
+						link: 'https://momentjs.com/',
+					},
+
+					{
+						name: 'Lodash JS',
+						link: 'https://lodash.com/',
+					},
+					{
+						name: 'Easy Toggler',
+						link: 'https://github.com/rah-emil/easy-toggler',
+					},
+					{
+						name: 'Screenfull',
+						link: 'https://sindresorhus.com/screenfull/',
+					},
+					{
+						name: 'Lazy JS',
+						link: 'https://lazy.js.org/',
+					},
+					{
+						name: 'Lazy Load JS',
+						link: 'https://verlok.github.io/vanilla-lazyload/',
+					},
+					{
+						name: 'Es Toolkit',
+						link: 'https://es-toolkit.slash.page/',
+					},
+					{
+						name: 'Scrambling Text JS',
+						link: 'https://github.com/sogoagain/scrambling-text-js',
+					},
+					{
+						name: 'Lenis',
+						link: 'https://github.com/darkroomengineering/lenis',
+					},
+					{
+						name: '',
+						link: '',
+					},
+				],
+			},
+			{
+				name: 'Date - Time',
+				slug: 'date-time',
+				tools: [
+					{
+						name: 'Luxon',
+						link: 'https://moment.github.io/luxon/#/?id=luxon',
+					},
+					{
+						name: 'DayJS',
+						link: 'https://day.js.org/',
+					},
+
+					{
+						name: 'Date-fns',
+						link: 'https://date-fns.org/',
+					},
+				],
+			},
+			{
+				name: "Drag'n'Drop",
+				slug: 'drag-n-drop',
+				tools: [
+					{
+						name: 'Swapy',
+						link: 'https://swapy.tahazsh.com/',
+					},
+					{
+						name: 'Dragula',
+						link: 'https://bevacqua.github.io/dragula/',
+					},
+					{
+						name: 'DnD Kit',
+						link: 'https://docs.dndkit.com/',
+					},
+				],
+			},
+			{
 				name: 'UI',
 				slug: 'ui',
 				tools: [
@@ -106,9 +219,38 @@ export const RESOURCES = [
 						name: 'React number format',
 						link: 'https://s-yadav.github.io/react-number-format/docs/intro',
 					},
+					{
+						name: 'Cleave.js',
+						link: 'https://nosir.github.io/cleave.js/',
+					},
 				],
 			},
-
+			{
+				name: 'Tailwind UI',
+				slug: 'tailwind-ui',
+				tools: [
+					{
+						name: 'Tailwind UI',
+						link: 'https://tailwindui.com/',
+					},
+					{
+						name: 'Material Tailwind',
+						link: 'https://www.material-tailwind.com/',
+					},
+					{
+						name: 'DaisyUI',
+						link: 'https://daisyui.com/',
+					},
+					{
+						name: 'Preline',
+						link: 'https://preline.co/',
+					},
+					{
+						name: 'Flowbite',
+						link: 'https://flowbite.com/',
+					},
+				],
+			},
 			{
 				name: 'Icons',
 				slug: 'icons',
@@ -352,6 +494,14 @@ export const RESOURCES = [
 						name: 'Tiptap',
 						link: 'https://tiptap.dev/docs',
 					},
+					{
+						name: 'Editor.js',
+						link: 'https://editorjs.io/',
+					},
+					{
+						name: 'ProseMirror',
+						link: 'https://prosemirror.net/',
+					},
 				],
 			},
 			{
@@ -435,6 +585,16 @@ export const RESOURCES = [
 				],
 			},
 			{
+				name: 'Templators',
+				slug: 'templators',
+				tools: [
+					{
+						name: 'Edge',
+						link: 'https://edgejs.dev/docs/introduction',
+					},
+				],
+			},
+			{
 				name: 'Utils',
 				slug: 'utils',
 				tools: [
@@ -460,6 +620,92 @@ export const RESOURCES = [
 					{
 						name: 'TG SDK',
 						link: 'https://github.com/twa-dev/SDK',
+					},
+				],
+			},
+		],
+	},
+	{
+		categoryName: 'Devops',
+		slug: 'devops',
+		sections: [
+			{
+				name: 'Web Servers',
+				slug: 'web-servers',
+				tools: [
+					{
+						name: 'Caddy',
+						link: 'https://caddyserver.com/',
+					},
+					{
+						name: 'Nginx',
+						link: 'https://nginx.org/',
+					},
+					{
+						name: 'Nginx Proxy Manager (NGINX Proxy Manager)',
+						link: 'https://nginxproxymanager.com/',
+					},
+				],
+			},
+			{
+				name: 'Self Hosted',
+				slug: 'self-hosted',
+				tools: [
+					{
+						name: 'Coolify',
+						link: 'https://coolify.io/',
+					},
+					{
+						name: 'Dokploy',
+						link: 'https://dokploy.com/',
+					},
+					{
+						name: 'Caprover',
+						link: 'https://caprover.com/docs/get-started.html',
+					},
+				],
+			},
+			{
+				name: 'Reverse Proxy',
+				slug: 'reverse-proxy',
+				tools: [
+					{
+						name: 'Traefik',
+						link: 'https://traefik.io/',
+					},
+				],
+			},
+			{
+				name: 'CMS',
+				slug: 'cms',
+				tools: [
+					{
+						name: 'Strapi',
+						link: 'https://strapi.io/',
+					},
+					{
+						name: 'PayloadCMS',
+						link: 'https://payloadcms.com/',
+					},
+					{
+						name: 'Ghost',
+						link: 'https://ghost.org/',
+					},
+				],
+			},
+		],
+	},
+	{
+		categoryName: 'Others',
+		slug: 'others',
+		sections: [
+			{
+				name: 'Builders',
+				slug: 'builders',
+				tools: [
+					{
+						name: 'Parcel',
+						link: 'https://parceljs.org/',
 					},
 				],
 			},
