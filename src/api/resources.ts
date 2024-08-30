@@ -615,6 +615,38 @@ export const RESOURCES = [
 					},
 				],
 			},
+			{
+				name: 'Database',
+				slug: 'database',
+				tools: [
+					{
+						name: 'Neon',
+						link: 'https://neon.tech/',
+					},
+					{
+						name: 'Drizzle',
+						link: 'https://orm.drizzle.team/',
+					},
+					{
+						name: 'Xata',
+						link: 'https://app.xata.io/',
+					},
+					{
+						name: 'Prisma',
+						link: 'https://www.prisma.io/',
+					},
+				],
+			},
+			{
+				name: 'Email',
+				slug: 'email',
+				tools: [
+					{
+						name: 'ReSend',
+						link: 'https://resend.com/home',
+					},
+				],
+			},
 		],
 	},
 	{
@@ -698,6 +730,52 @@ export const RESOURCES = [
 					{
 						name: 'Parcel',
 						link: 'https://parceljs.org/',
+					},
+				],
+			},
+			{
+				name: 'All Tools',
+				slug: 'all-tools',
+				tools: [
+					{
+						name: 'Zrok',
+						link: 'https://zrok.io/',
+					},
+					{
+						name: 'GitVerse',
+						link: 'https://gitverse.ru/home/',
+					},
+					{
+						name: 'Mock Config Server',
+						link: 'https://github.com/siberiacancode/mock-config-server',
+					},
+					{
+						name: '',
+						link: '',
+					},
+				],
+			},
+		],
+	},
+	{
+		categoryName: 'web 3',
+		slug: 'web3',
+		sections: [
+			{
+				name: 'All Tools',
+				slug: 'all-tools',
+				tools: [
+					{
+						name: 'Thirdweb',
+						link: 'https://portal.thirdweb.com/',
+					},
+					{
+						name: 'Thirdweb',
+						link: 'https://portal.thirdweb.com/',
+					},
+					{
+						name: 'Viem',
+						link: 'https://viem.sh/',
 					},
 				],
 			},

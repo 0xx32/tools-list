@@ -20,8 +20,8 @@ export const ToolsView = () => {
 				<HoverEffectContainer className="lg:grid-cols-2">
 					{toolCategory.tools.map((tool, index) => (
 						<CardHoverEffect key={tool.name} index={index}>
-							<a href={tool.link} target="_blank">
-								<h4 className="mb-4 text-xl font-semibold">{tool.name}</h4>
+							<a href={tool.link} target="_blank" className="block p-6">
+								<h4 className="text-xl font-semibold">{tool.name}</h4>
 								{/* <div className="text-muted-foreground">dawdawdawd</div> */}
 							</a>
 						</CardHoverEffect>

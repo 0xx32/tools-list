@@ -47,9 +47,10 @@ export const CardHoverEffect = ({ className, children, index }: CardProps) => {
 					/>
 				)}
 			</AnimatePresence>
-			<div className="relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-black p-4 group-hover:border-slate-700 dark:border-white/[0.2]">
-				<div className="relative z-50">
-					<div className="p-4">{children}</div>
+			<div className="relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-black group-hover:border-slate-700 dark:border-white/[0.2]">
+				<div className="relative z-50 h-full">
+					{/* <div>{children}</div> */}
+					{children}
 				</div>
 			</div>
 		</div>
