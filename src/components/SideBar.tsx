@@ -46,25 +46,27 @@ export const SideBar = () => {
 										animate={{ height: openCategories.includes(category.slug) ? 'auto' : 36 }}
 										exit={{ height: 0 }}
 									>
-										{category.sections.map((section) => (
-											<Link
-												key={section.slug}
-												to="/$categorySlug/tools/$toolSlug"
-												params={{ categorySlug: category.slug, toolSlug: section.slug }}
-												className={clsx(
-													'text-md group flex w-full items-center rounded-md border border-transparent px-2 py-1 font-semibold text-muted-foreground outline-none transition duration-200 hover:translate-x-1 hover:text-emerald-500',
-													`${category.slug}/tools/${section.slug}`,
-													'',
-													{
-														['text-white']:
-															location.pathname ===
-															`/${category.slug}/tools/${section.slug}`,
-													}
-												)}
-											>
-												{section.name}
-											</Link>
-										))}
+										{category.sections
+											.sort((a, b) => a.name.localeCompare(b.name))
+											.map((section) => (
+												<Link
+													key={section.slug}
+													to="/$categorySlug/tools/$toolSlug"
+													params={{ categorySlug: category.slug, toolSlug: section.slug }}
+													className={clsx(
+														'text-md group flex w-full items-center rounded-md border border-transparent px-2 py-1 font-semibold text-muted-foreground outline-none transition duration-200 hover:translate-x-1 hover:text-emerald-500',
+														`${category.slug}/tools/${section.slug}`,
+														'',
+														{
+															['text-white']:
+																location.pathname ===
+																`/${category.slug}/tools/${section.slug}`,
+														}
+													)}
+												>
+													{section.name}
+												</Link>
+											))}
 									</motion.div>
 								)}
 							</AnimatePresence>

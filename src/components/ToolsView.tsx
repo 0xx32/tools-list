@@ -12,13 +12,15 @@ export const ToolsView = () => {
 
 	if (!toolCategory) return <div>Такого ресурса не существует</div>
 
+	const filtereTools = toolCategory.tools.filter((tool) => tool.name)
+
 	return (
 		<div className="flex flex-col gap-3">
 			<h2 className="text-4xl font-semibold text-white">{toolCategory.name}</h2>
 
-			{toolCategory.tools.length && (
+			{filtereTools.length && (
 				<HoverEffectContainer className="lg:grid-cols-2">
-					{toolCategory.tools.map((tool, index) => (
+					{filtereTools.map((tool, index) => (
 						<CardHoverEffect key={tool.name} index={index}>
 							<a href={tool.link} target="_blank" className="block p-6">
 								<h4 className="text-xl font-semibold">{tool.name}</h4>
