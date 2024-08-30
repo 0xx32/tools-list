@@ -172,10 +172,6 @@ export const RESOURCES = [
 						name: 'Uiverse',
 						link: 'https://uiverse.io/',
 					},
-					{
-						name: 'Tailwind UI',
-						link: 'https://tailwindui.com/',
-					},
 				],
 			},
 			{
@@ -438,10 +434,6 @@ export const RESOURCES = [
 				name: 'Others',
 				slug: 'others',
 				tools: [
-					{
-						name: 'Flowbite',
-						link: 'https://flowbite.com/',
-					},
 					{
 						name: 'Refine',
 						link: 'https://refine.dev/',

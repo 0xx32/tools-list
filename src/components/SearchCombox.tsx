@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from './ui/dialog'
 import { Link } from '@tanstack/react-router'
-import { Circle, File } from 'lucide-react'
+import { Circle } from 'lucide-react'
 
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
 
@@ -10,6 +10,8 @@ import { RESOURCES } from '@/api/resources'
 export function SearchCombox() {
 	const [open, setOpen] = React.useState(false)
 	const [value, setValue] = React.useState('')
+
+	const allTools = RESOURCES.flatMap((category) => category.sections.flatMap((section) => section.tools))
 
 	return (
 		<Dialog open={open} onOpenChange={setOpen}>
@@ -31,22 +33,6 @@ export function SearchCombox() {
 					<CommandInput placeholder="Search toolls..." />
 					<CommandList className="scrollbar-thin scrollbar-track-neutral-900 scrollbar-thumb-neutral-600">
 						<CommandEmpty>No tools.</CommandEmpty>
-						<CommandGroup className="px-2">
-							<div className="mb-2 px-2 py-1 text-xs text-muted-foreground">Categories</div>
-							{RESOURCES.map((category) => (
-								<CommandItem
-									key={category.slug}
-									value={category.categoryName}
-									onSelect={(currentValue) => {
-										setValue(currentValue === value ? '' : currentValue)
-										setOpen(false)
-									}}
-									className="flex items-center gap-3"
-								>
-									<File size={18} /> {category.categoryName}
-								</CommandItem>
-							))}
-						</CommandGroup>
 
 						{RESOURCES.map((res, index) => (
 							<CommandGroup key={index} className="px-2">
@@ -71,6 +57,23 @@ export function SearchCombox() {
 								))}
 							</CommandGroup>
 						))}
+						<CommandGroup className="px-2">
+							<div className="mb-2 px-2 py-1 text-xs text-muted-foreground">All tools</div>
+							{allTools.map((tool) => (
+								<Link key={tool.link}>
+									<CommandItem
+										value={tool.name}
+										onSelect={(currentValue) => {
+											setValue(currentValue === value ? '' : currentValue)
+											setOpen(false)
+										}}
+										className="flex items-center gap-3"
+									>
+										<Circle size={16} /> {tool.name}
+									</CommandItem>
+								</Link>
+							))}
+						</CommandGroup>
 					</CommandList>
 				</Command>
 			</DialogContent>

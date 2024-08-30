@@ -34,8 +34,6 @@ const config = {
 
 	importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
 	importOrderTypeScriptVersion: '5.5.3',
-	importOrderSeparation: true,
-	importOrderSortSpecifiers: true,
 }
 
 export default config

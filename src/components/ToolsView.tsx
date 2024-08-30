@@ -1,5 +1,5 @@
+import { CardHoverEffect, HoverEffectContainer } from './ui'
 import { useLoaderData } from '@tanstack/react-router'
-import { motion } from 'framer-motion'
 
 interface ToolCategory {
 	tools: Tool[]
@@ -12,34 +12,22 @@ export const ToolsView = () => {
 
 	if (!toolCategory) return <div>Такого ресурса не существует</div>
 
-	console.log(toolCategory)
-
 	return (
-		<div className="flex h-screen flex-col gap-3 p-6 pt-0">
-			<h2 className="mb-6 text-3xl font-semibold text-white">{toolCategory.name}</h2>
-			{toolCategory.tools.length &&
-				toolCategory.tools.map((tool, index) => (
-					<motion.div
-						key={tool.name}
-						className="flex items-center gap-4 rounded-md border-b border-white/20 p-2 pb-2 hover:bg-muted"
-						animate={{ opacity: 1 }}
-						initial={{ opacity: 0 }}
-						transition={{ duration: 0.5, delay: index * 0.1 }}
-					>
-						<span className="w-6">{index + 1}.</span>
-						<a
-							href={tool.link}
-							target="_blank"
-							className="flex items-center gap-3 text-lg capitalize transition-colors hover:text-muted-foreground hover:underline"
-						>
-							{/* <i className="h-6 w-6 border border-border rounded-md overflow-hidden ">
-                                <img className="w-full" src={tool.link + 'favicon.ico'} />
-                            </i> */}
+		<div className="flex flex-col gap-3">
+			<h2 className="text-4xl font-semibold text-white">{toolCategory.name}</h2>
 
-							<span> {tool.name}</span>
-						</a>
-					</motion.div>
-				))}
+			{toolCategory.tools.length && (
+				<HoverEffectContainer className="lg:grid-cols-2">
+					{toolCategory.tools.map((tool, index) => (
+						<CardHoverEffect key={tool.name} index={index}>
+							<a href={tool.link} target="_blank">
+								<h4 className="mb-4 text-xl font-semibold">{tool.name}</h4>
+								{/* <div className="text-muted-foreground">dawdawdawd</div> */}
+							</a>
+						</CardHoverEffect>
+					))}
+				</HoverEffectContainer>
+			)}
 		</div>
 	)
 }
